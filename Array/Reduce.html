@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Array.prototype.reduce</title>
+</head>
+<body>
+    <script>
+      const numeri = [4,2,2];
+      /*Il metodo reduce riceve nella callback due parametri,
+      un accumulatore ossia gli elementi ritornati e come
+      secondo il valore corrente dell'array. Riduce tutto
+      a un singolo valore. 0 è il valore iniziale dell'accumulatore.
+      */
+      const callback = (totale , elemento) => {
+         return totale + elemento;
+      };
+      const totale = numeri.reduce(callback,0);
+      console.log(totale);
+      const a = [
+      [1,2,3],
+      [4,5,6],
+      [7,8,9]
+    ];
+    const callback1 = (concatenato, elemento) => {
+        return concatenato.concat(elemento);
+    };
+    const b = a.reduce(callback1,[]);
+    console.log(b);
+    //PASSAGGI
+    //1)[].concat[1,2,3]->[1,2,3]
+    //2)[1,2,3].concat[4,5,6]->[1,2,3,4,5,6]
+    //3)[1,2,3,4,5,6].concat[6,7,8]->[1,2,3,4,5,6,7,8,9]
+    </script>
+</body>
+</html>

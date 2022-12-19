@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Use strict</title>
+</head>
+<body>
+    <script>
+        //Per applicare la modalità script all'intero programma
+        //si usa l'istruzione "use strict"; come prima riga di codice.
+        //"use strict";
+        "use strict";
+        const numero = 10;
+        console.log(numero);
+        /*Se passiamo alla modalità strict abbiamo un errore di
+        riferimento perchè stiamo assegnado un valore ad una variabile
+        non dichiarata (numero = 10;). Mettiamo const numero = 10 per risolvere 
+        l'errore.*/
+        function fn(){
+            "use strict";
+            /*Il programma javascript opererà in modalità
+            sloppy (normale) se non mettiamo use strict all'inizio
+            mentre la funzione opererà in modalità strict.*/
+        }
+    </script>
+</body>
+</html>

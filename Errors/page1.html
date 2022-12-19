@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GESTIONE ERRORI</title>
+</head>
+<body>
+    <script>
+        function fn(){
+            fn();
+        }
+        try{
+          //fn();
+          fn2();
+        }
+        catch(e){
+            /*L'oggetto passato al blocco catch è di tipo
+            internal error per la funzione ricorsiva. Abbiamo anche errori di riferimento.
+            Invochiamo una funzione che non è stata definita fn2().
+            Abbiamo un oggetto di tipo ReferenceError*/
+            console.dir(e);
+        }
+        console.log(1);
+    </script>
+</body>
+</html>

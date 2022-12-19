@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Array.prototype.sort</title>
+</head>
+<body>
+    <script>
+        let numeri = [6,5,11,3,21];
+        /*Sort converte gli
+        elementi in stringa ed effettua un confronto Unicode delle unità
+        a 16 bit.*/
+        console.log(numeri.sort());//Array non ordinato
+        numeri.sort((a,b) => a - b);//Ordinamento crescente
+        numeri.sort((a,b) => b - a);//Ordinamento decrescente
+        console.log(numeri);
+        /*La funzione di comparazione valuta se la differenza
+        restituisce un valore maggiore, minore o uguale a zero
+        e in base a quello stabilisce dove posizionare l'elemento
+        nell'array.*/
+        const tv = [
+            {marca:"LG", modello:65, prezzo:820},
+            {marca:"Sony", modello:55, prezzo:680},
+            {marca:"Samsung", modello:70, prezzo:780},
+            {marca:"Sony", modello:60, prezzo:920},
+            {marca:"LG", modello:50, prezzo:620},
+            {marca:"Panasonic", modello:65, prezzo:1200},
+        ];
+        tv.sort((tv1,tv2) => tv2.modello - tv1.modello);//Ordinamento decrescente
+        console.table(tv);
+    </script>
+</body>
+</html>
